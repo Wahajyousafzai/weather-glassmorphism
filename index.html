@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/x-icon" href="New folder/cloudy (1).png" />
+  </head>
+  <body>
+    <span class="container" data-tilt>
+      <div class="content">
+        <span class="search">
+          <input
+            class="city-input"
+            id="city-input"
+            type="text"
+            placeholder="Enter City"
+            id="city-name"
+          />
+          <button class="city-input" id="search-button">Search</button>
+        </span>
+        <br /><br />
+        <div class="information">
+          <span style="display: flex; flex-direction: row"
+            ><img
+              height="25px"
+              width="25"
+              src="New folder/temprature.png"
+              alt=""
+            /><span class="individuals" id="temp">
+              Temprature 0 <sup>.</sup></span
+            ></span
+          >
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              height="25px"
+              width="25"
+              src="New folder/tamprature.png"
+              alt=""
+            /><span class="individuals" id="feels_like"
+              >Feels Like 0 <sup>.</sup></span
+            ></span
+          >
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              src="New folder/clouds.png"
+              height="25px"
+              width="25px"
+              alt=""
+            /><span class="individuals" id="Cloud_Cover"
+              >Cloud Cover</span
+            ></span
+          >
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              height="25px"
+              width="25"
+              src="New folder/wind.png"
+              alt=""
+            /><span class="individuals" id="wind">Wind</span></span
+          >
+          <br />
+          <span style="display: flex; flex-direction: row">
+            <img
+              height="25px"
+              width="25"
+              src="New folder/humidity.png"
+              alt=""
+            />
+            <span class="individuals" id="humidity">Humidity</span></span
+          >
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              height="25px"
+              width="25"
+              src="New folder/business.png"
+              alt=""
+            />
+            <span class="individuals" id="visibility">Visibility</span></span
+          >
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              height="25px"
+              width="25"
+              src="New folder/uv-protection.png"
+              alt=""
+            /><span class="individuals" id="uv">UV </span></span
+          >
+
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              src="New folder/coronavirus.png"
+              height="25px"
+              width="25px"
+              alt="" /><span class="individuals" id="country"
+              >Country/City</span
+            >
+            <br
+          /></span>
+          <br />
+          <span style="display: flex; flex-direction: row"
+            ><img
+              src="New folder/calendar.png"
+              height="25px"
+              width="25px"
+              alt=""
+            /><span class="individuals" id="time">Time</span></span
+          >
+          <br />
+        </div>
+      </div>
+    </span>
+    <script src="index.js"></script>
+    <script id="heading" class="contain" src="vanilla-tilt.js"></script>
+  </body>
+</html>
