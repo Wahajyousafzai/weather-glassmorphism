@@ -1,6 +1,6 @@
 const button = document.getElementById("search-button");
 const input = document.getElementById("city-input");
-let img = document.querySelectorAll("img")
+let img = document.querySelectorAll("img");
 let country = document.getElementById("country");
 let time = document.getElementById("time");
 let Cloud_Cover = document.getElementById("Cloud_Cover");
@@ -10,8 +10,7 @@ let visibility = document.getElementById("visibility");
 let uv = document.getElementById("uv");
 let feels_like = document.getElementById("feels_like");
 let temp = document.getElementById("temp");
-
-
+let myDocument = document.documentElement;
 
 async function getData(cityname) {
   const promise = await fetch(
@@ -26,32 +25,36 @@ button.addEventListener("click", async () => {
   country.innerText = ` ${result.location.country}, ${result.location.name}`;
   time.innerText = `  Time : ${result.location.localtime}`;
   Cloud_Cover.innerText = `  Cloud Cover : ${result.current.cloud}%`;
-  wind.innerHTML = `  Wind Direction : ${result.current.wind_dir}    | |    Wind Speed : ${result.current.gust_kph}`;
+  wind.innerHTML = `  Wind Direction : ${result.current.wind_dir}    | |    Wind Speed : ${result.current.gust_kph} km`;
   humidity.innerHTML = `   Humidity : ${result.current.humidity}%`;
-  visibility.innerHTML = `   Visibility : ${result.current.vis_km}`;
+  visibility.innerHTML = `   Visibility : ${result.current.vis_km} km`;
   uv.innerText = `   UV : ${result.current.uv}`;
   feels_like.innerText = `   Feels Like : ${result.current.feelslike_c}°C`;
   temp.innerText = `  Temperature : ${result.current.temp_c}°C`;
-
 });
 
-
-
-const divs = document.querySelectorAll(".container")
-for (let div of divs){
+const divs = document.querySelectorAll(".container");
+for (let div of divs) {
   div.ondblclick = deleteDiv;
+  div.onclick = dis;
 }
 
-function deleteDiv (){
+function dis() {
+  myDocument.requestFullscreen();
+}
+
+function deleteDiv() {
+  this.remove();
+  myDocument.requestFullscreen();
+}
+
+const div = document.querySelectorAll(".contain");
+
+for (let divs of div) {
+  divs.ondblclick = dele;
+}
+
+function dele() {
   this.remove();
 }
 
-const div = document.querySelectorAll(".contain")
-
-for (let div of div){
-  div.ondblclick = dele;
-}
-
-function dele (){
-  this.remove();
-}
